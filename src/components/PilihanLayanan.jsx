@@ -76,7 +76,7 @@ export default function PilihanLayanan() {
             </a>
           </motion.div>
 
-          {/* Box Custom - Dark Feature Card */}
+          {/* Box Custom - Light Blue Feature Card */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -85,21 +85,21 @@ export default function PilihanLayanan() {
             className="card-dark flex flex-col h-full"
           >
             <div className="flex-1">
-              <div className="w-12 h-12 rounded-[var(--radius-lg)] bg-white/10 flex items-center justify-center mb-6">
-                <Palette className="text-white" size={24} />
+              <div className="w-12 h-12 rounded-[var(--radius-lg)] bg-[var(--color-pure-white)] flex items-center justify-center mb-6">
+                <Palette className="text-[var(--color-notion-blue)]" size={24} />
               </div>
-              <h3 className="text-notion-heading-sm text-white mb-2">Custom</h3>
-              <p className="text-notion-body text-white/70 mb-6">Untuk kamu yang butuh desain & fitur khusus</p>
+              <h3 className="text-notion-heading-sm text-[var(--color-ink-black)] mb-2">Custom</h3>
+              <p className="text-notion-body text-[var(--color-slate)] mb-6">Untuk kamu yang butuh desain & fitur khusus</p>
               
-              <div className="inline-flex items-center gap-2 text-notion-caption font-bold bg-white/10 text-white px-3 py-1.5 rounded-[var(--radius-pills)] mb-8">
+              <div className="inline-flex items-center gap-2 text-notion-caption font-bold bg-[var(--color-pure-white)] text-[var(--color-notion-blue)] px-3 py-1.5 rounded-[var(--radius-pills)] mb-8">
                 <Sparkles size={14} />
                 Dikerjakan dari nol
               </div>
               
               <ul className="space-y-3 mb-10">
                 {customFeatures.map((f) => (
-                  <li key={f} className="flex items-start gap-3 text-notion-body-sm text-white/80">
-                    <CheckCircle2 size={18} className="text-white shrink-0 mt-0.5" />
+                  <li key={f} className="flex items-start gap-3 text-notion-body-sm text-[var(--color-slate)]">
+                    <CheckCircle2 size={18} className="text-[var(--color-notion-blue)] shrink-0 mt-0.5" />
                     {f}
                   </li>
                 ))}
@@ -107,7 +107,7 @@ export default function PilihanLayanan() {
             </div>
             <a 
               href="#kontak" 
-              className="inline-flex items-center justify-center gap-2 w-full py-3 rounded-[var(--radius-lg)] font-medium bg-white text-[var(--color-midnight-ink)] hover:bg-white/90 transition-colors mt-auto text-notion-body-sm"
+              className="inline-flex items-center justify-center gap-2 w-full py-3 rounded-[var(--radius-lg)] font-medium bg-[var(--color-notion-blue)] text-[var(--color-pure-white)] hover:bg-[var(--color-signal-blue)] transition-colors mt-auto text-notion-body-sm"
             >
               Konsultasi Custom
               <ArrowRight size={16} />

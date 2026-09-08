@@ -34,14 +34,11 @@ export default function Navbar() {
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-[var(--surface-card-surface)]/90 backdrop-blur-md' : 'bg-transparent'}`}
         style={{ boxShadow: scrolled ? '0px 0.7px 1.462px 0px rgba(0,0,0,0.015), 0px 3px 9px 0px rgba(0,0,0,0.03)' : 'none' }}
       >
-        <div className="container-custom h-16 flex items-center justify-between">
+        <div className="container-custom h-13 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
-            <div className="w-6 h-6 bg-[var(--color-ink-black)] rounded-md flex items-center justify-center text-white font-bold text-xs">
-              A
+            <div className="h-30 w-30 rounded-full flex items-center justify-center">
+              <img src="/public/img/logo/polosan_logo.png" alt="" />
             </div>
-            <span className="text-notion-subheading font-bold tracking-tight text-[var(--color-ink-black)]">
-              Astrify
-            </span>
           </Link>
 
           <div className="hidden md:flex items-center gap-2">

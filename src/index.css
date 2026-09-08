@@ -121,11 +121,11 @@ html {
   }
 
   .card-dark {
-    background-color: var(--surface-dark-card-surface);
-    color: var(--color-pure-white);
+    background: linear-gradient(180deg, #eaf5ff 0%, #dff0ff 100%);
+    color: var(--color-ink-black);
     border-radius: var(--radius-xl);
     padding: var(--spacing-24);
-    border: none;
+    border: 1px solid rgba(0, 117, 222, 0.12);
     box-shadow: none;
   }
 
