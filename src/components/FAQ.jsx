@@ -4,20 +4,20 @@ import { ChevronDown } from 'lucide-react'
 
 const faqs = [
   {
-    q: 'Apa beda Template dan Custom?',
-    a: 'Template adalah desain website siap pakai yang tinggal disesuaikan dengan konten bisnismu. Custom adalah website yang didesain dan dibangun dari nol sesuai kebutuhan dan brand kamu.',
+    q: 'Website seperti apa yang bisa dibuat?',
+    a: 'Kami mengerjakan landing page, website perusahaan, dan toko online. Struktur dan isi halaman disesuaikan dengan tujuan bisnis kamu.',
   },
   {
     q: 'Berapa lama pengerjaan website?',
-    a: 'Template: 3–7 hari kerja. Custom: 2–6 minggu tergantung kompleksitas fitur dan desain yang diminta.',
+    a: 'Landing page selesai sekitar 4 hari kerja, website perusahaan sekitar 7 hari kerja, dan toko online sekitar 7–20 hari kerja setelah materi lengkap.',
   },
   {
     q: 'Berapa kali revisi?',
-    a: 'Kami berikan revisi yang cukup sampai kamu puas. Untuk paket Template biasanya 2–3x revisi, untuk Custom disesuaikan di awal kesepakatan.',
+    a: 'Jumlah revisi disepakati sebelum pengerjaan dimulai. Kami memastikan halaman, konten, dan tampilan sudah sesuai sebelum website dipublikasikan.',
   },
   {
     q: 'Bagaimana sistem pembayarannya?',
-    a: 'DP 50% saat deal, sisanya setelah website selesai dan kamu approve. Transfer via bank lokal / e-wallet.',
+    a: 'Pembayaran dilakukan sesuai invoice dan kesepakatan proyek. Detail termin akan dijelaskan sejak konsultasi awal agar semuanya jelas.',
   },
   {
     q: 'Apakah ada biaya hosting & domain?',

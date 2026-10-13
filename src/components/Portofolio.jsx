@@ -53,7 +53,7 @@ export default function Portofolio() {
               Proyek yang Sudah Kami Kerjakan
             </h2>
             <p className="font-editorial text-[20px] text-[var(--color-graphite)]">
-              Bukti nyata kemampuan kami mengerjakan website custom dari nol untuk berbagai klien.
+              Beberapa contoh arah website yang bisa kami bangun untuk kebutuhan bisnis yang berbeda.
             </p>
           </div>
           <div className="shrink-0">
@@ -71,7 +71,7 @@ export default function Portofolio() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.1, ease: "easeOut" }}
-              className={`p-6 flex flex-col h-[300px] justify-between cursor-pointer group rounded-[var(--radius-xl)] ${p.color} ${p.color === 'bg-white' ? 'border border-[var(--border-light)]' : ''}`}
+              className={`group flex h-[300px] cursor-pointer flex-col justify-between rounded-[18px] p-6 transition-transform duration-300 hover:-translate-y-1 ${p.color} ${p.color === 'bg-white' ? 'border border-[var(--border-light)]' : ''}`}
             >
               <div className="flex justify-between items-start">
                 <span className={`inline-block text-notion-caption font-bold rounded-[var(--radius-pills)] px-3 py-1 ${p.color.includes('dark') ? 'bg-white/20 text-white' : 'bg-black/5 text-[var(--color-ink-black)]/60'}`}>

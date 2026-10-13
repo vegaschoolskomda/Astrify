@@ -1,17 +1,14 @@
 export default function Footer() {
   return (
-    <footer className="bg-[var(--surface-page-canvas)] py-16 border-t border-[var(--border-light)]">
+    <footer className="border-t border-[var(--border-light)] bg-white py-16">
       <div className="container-custom">
         <div className="grid md:grid-cols-3 gap-10 mb-16">
           <div>
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-6 h-6 bg-[var(--color-ink-black)] rounded-md flex items-center justify-center text-white font-bold text-xs">
-                A
-              </div>
-              <span className="text-notion-subheading font-bold text-[var(--color-ink-black)]">Astrify</span>
+              <img src="/img/logo/logo-lengkap.png" alt="Astrify" className="h-8 w-auto object-contain" />
             </div>
             <p className="text-[var(--color-slate)] text-notion-body-sm leading-relaxed max-w-xs">
-              Solusi digital untuk website profesionalmu. Template siap pakai atau custom dari nol.
+              Website yang membantu bisnis terlihat lebih dipercaya dan lebih mudah dihubungi.
             </p>
           </div>
 

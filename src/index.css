@@ -73,11 +73,11 @@
 
 :root {
   /* Surfaces */
-  --surface-page-canvas: #f6f5f4;
+  --surface-page-canvas: #f8f9fb;
   --surface-card-surface: #ffffff;
   --surface-accent-card-surface: #ffb110;
   --surface-dark-card-surface: #02093a;
-  --border-light: rgba(0, 0, 0, 0.08);
+  --border-light: #e4e8ef;
 }
 
 html {
@@ -89,44 +89,50 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  margin: 0;
+  background: var(--surface-page-canvas);
+  color: var(--color-charcoal);
+}
+
 @layer components {
   /* Layout utilities */
   .container-custom {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1240px;
     margin: 0 auto;
-    padding-left: var(--spacing-24);
-    padding-right: var(--spacing-24);
+    padding-left: clamp(20px, 4vw, 48px);
+    padding-right: clamp(20px, 4vw, 48px);
   }
 
   .section-padding {
-    padding-top: var(--spacing-80);
-    padding-bottom: var(--spacing-80);
+    padding-top: clamp(64px, 8vw, 112px);
+    padding-bottom: clamp(64px, 8vw, 112px);
   }
 
   /* Cards */
   .card-white {
     background-color: var(--surface-card-surface);
-    border-radius: var(--radius-xl);
+    border-radius: 18px;
     padding: var(--spacing-24);
     border: 1px solid var(--border-light);
-    box-shadow: none; /* Strict no shadow rule */
+    box-shadow: 0 8px 24px rgba(24, 42, 72, 0.05);
   }
 
   .card-accent {
-    border-radius: var(--radius-xl);
+    border-radius: 24px;
     padding: var(--spacing-24);
     border: none;
-    box-shadow: none;
+    box-shadow: 0 12px 28px rgba(24, 42, 72, 0.08);
   }
 
   .card-dark {
     background: linear-gradient(180deg, #eaf5ff 0%, #dff0ff 100%);
     color: var(--color-ink-black);
-    border-radius: var(--radius-xl);
+    border-radius: 18px;
     padding: var(--spacing-24);
     border: 1px solid rgba(0, 117, 222, 0.12);
-    box-shadow: none;
+    box-shadow: 0 8px 24px rgba(24, 42, 72, 0.05);
   }
 
   /* Typography */
@@ -154,7 +160,8 @@ html {
   .text-notion-heading-lg {
     font-size: var(--text-heading-lg);
     line-height: var(--leading-heading-lg);
-    font-weight: 600;
+    font-weight: 650;
+    letter-spacing: -1.5px;
   }
   
   .text-notion-heading {
@@ -204,9 +211,9 @@ html {
     background-color: var(--color-notion-blue);
     color: var(--color-pure-white);
     font-size: var(--text-body-sm);
-    font-weight: 500;
-    border-radius: var(--radius-lg);
-    padding: 8px 16px;
+    font-weight: 650;
+    border-radius: 10px;
+    padding: 11px 18px;
     transition: all 0.2s ease;
     display: inline-flex;
     align-items: center;
@@ -218,12 +225,13 @@ html {
   }
 
   .btn-ghost {
-    background-color: var(--color-sky-tint);
+    background-color: transparent;
     color: var(--color-notion-blue);
     font-size: var(--text-body-sm);
     font-weight: 500;
-    border-radius: var(--radius-lg);
-    padding: 8px 16px;
+    border: 1px solid currentColor;
+    border-radius: 10px;
+    padding: 10px 18px;
     transition: all 0.2s ease;
     display: inline-flex;
     align-items: center;

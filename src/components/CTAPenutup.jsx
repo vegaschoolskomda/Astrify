@@ -10,15 +10,15 @@ export default function CTAPenutup() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, type: "spring", bounce: 0.3 }}
-          className="card-accent bg-[var(--color-notion-blue)] text-center py-20 px-6 relative overflow-hidden"
+          className="card-accent relative overflow-hidden bg-[#142d67] px-6 py-20 text-center"
         >
 
           <div className="relative z-10 max-w-3xl mx-auto">
             <h2 className="text-notion-display-sm md:text-notion-display text-[var(--color-white)] mb-6">
-              Siap Bangun Website Impianmu?
+              Punya rencana untuk websitemu?
             </h2>
             <p className="font-editorial text-[22px] md:text-[28px] text-[var(--color-white)] mb-10 leading-relaxed">
-              Konsultasi gratis, tanpa komitmen. Ceritakan kebutuhanmu dan kami bantu temukan solusi terbaik.
+              Ceritakan kebutuhanmu. Kami bantu menyusun website yang masuk akal untuk target dan anggaran bisnis kamu.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a 

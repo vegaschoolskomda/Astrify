@@ -9,8 +9,8 @@ const steps = [
   },
   {
     icon: MousePointerClick,
-    title: 'Pilih Jalur',
-    desc: 'Tentukan pakai Template atau Custom — sesuai budget dan kebutuhan.',
+    title: 'Tentukan Arah',
+    desc: 'Pilih jenis website dan susun kebutuhan utama sesuai target bisnis.',
   },
   {
     icon: Palette,
@@ -38,14 +38,14 @@ export default function ProsesKerja() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="card-accent bg-[var(--color-marigold)]"
+          className="card-accent border border-[#e5e8ee] bg-white"
         >
           <div className="max-w-3xl mx-auto text-center mb-16 pt-8">
             <h2 className="text-notion-heading lg:text-notion-heading-lg text-[var(--color-ink-black)] mb-6">
               Dari Konsultasi Sampai Online
             </h2>
             <p className="font-editorial text-[22px] text-[var(--color-charcoal)]">
-              Alur yang transparan — kamu tahu setiap langkahnya.
+              Alur yang jelas, komunikasi terbuka, tanpa kejutan di tengah jalan.
             </p>
           </div>
 
@@ -57,7 +57,7 @@ export default function ProsesKerja() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: i * 0.1, ease: "easeOut" }}
-                className="bg-white/40 rounded-[var(--radius-xl)] p-6 relative overflow-hidden"
+                className="relative overflow-hidden rounded-xl border border-[#e5e8ee] bg-[#f8f9fb] p-6"
               >
                 <div className="absolute top-0 right-0 p-4 opacity-10">
                   <s.icon size={64} />

@@ -53,7 +53,7 @@ export default function KatalogTemplate() {
               Pilih Desain yang Sudah Siap
             </h2>
             <p className="font-editorial text-[20px] text-[var(--color-graphite)]">
-              Template profesional untuk berbagai jenis bisnis. Tinggal pilih, sesuaikan, dan online.
+              Contoh arah visual untuk membantu kamu menemukan tampilan yang paling cocok untuk bisnis.
             </p>
           </div>
           <div className="shrink-0">
@@ -71,14 +71,14 @@ export default function KatalogTemplate() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.1, ease: "easeOut" }}
-              className="card-white p-0 overflow-hidden group cursor-pointer flex flex-col"
+              className="card-white group flex cursor-pointer flex-col overflow-hidden p-0 transition-transform duration-300 hover:-translate-y-1"
             >
-              <div className={`h-48 ${t.color} flex items-center justify-center relative border-b border-[var(--border-light)] overflow-hidden`}>
-                <span className="text-notion-heading-sm text-[var(--color-ink-black)]/20 font-bold group-hover:scale-105 transition-transform duration-500">
+              <div className={`relative flex h-48 items-center justify-center overflow-hidden border-b border-[var(--border-light)] ${t.color}`}>
+                <span className="text-notion-heading-sm font-bold text-[var(--color-ink-black)]/20 transition-transform duration-500 group-hover:scale-105">
                   {t.name}
                 </span>
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/40 backdrop-blur-[2px]">
-                  <div className="bg-white rounded-[var(--radius-buttons)] p-2.5 shadow-sm border border-[var(--border-light)] translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                <div className="absolute inset-0 flex items-center justify-center bg-white/40 opacity-0 backdrop-blur-[2px] transition-opacity duration-300 group-hover:opacity-100">
+                  <div className="translate-y-4 rounded-lg border border-[var(--border-light)] bg-white p-2.5 shadow-sm transition-transform duration-300 group-hover:translate-y-0">
                     <ExternalLink size={18} className="text-[var(--color-ink-black)]" />
                   </div>
                 </div>

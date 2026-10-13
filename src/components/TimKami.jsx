@@ -8,28 +8,28 @@ const tim = [
     slug: 'naufal',
     role: 'DevOps & Backend Developer',
     color: 'border-[var(--color-notion-blue)]',
-    image: '/public/img/admin/naufal.png',
+    image: '/img/admin/naufal.png',
   },
   {
     name: 'Vega',
     slug: 'vega',
     role: 'FullStack Developer',
     color: 'border-[var(--color-coral)]',
-    image: '/public/img/admin/vega.png',
+    image: '/img/admin/vega.png',
   },
   {
     name: 'Kevin',
     slug: 'kevin',
     role: 'Ui/UX Designer',
     color: 'border-[var(--color-marigold)]',
-    image: '/public/img/admin/kevin.png',
+    image: '/img/admin/kevin.png',
   },
   {
     name: 'Atha',
     slug: 'atha',
     role: 'Data Analyst & Frontend Developer',
     color: 'border-[var(--color-sky-wash)]',
-    image: '/public/img/admin/atha.png',
+    image: '/img/admin/atha.png',
   },
 ]
 
