@@ -4,56 +4,67 @@ import { ChevronDown } from 'lucide-react'
 
 const faqs = [
   {
-    q: 'Website seperti apa yang bisa dibuat?',
-    a: 'Kami mengerjakan landing page, website perusahaan, dan toko online. Struktur dan isi halaman disesuaikan dengan tujuan bisnis kamu.',
+    q: 'Jenis website apa saja yang dapat dibuat oleh Astrify?',
+    a: 'Kami melayani pembuatan Landing Page promosi konversi tinggi, Website Perusahaan (company profile) untuk tender dan kredibilitas, serta Toko Online mandiri dengan katalog dan integrasi pemesanan WhatsApp.',
   },
   {
-    q: 'Berapa lama pengerjaan website?',
-    a: 'Landing page selesai sekitar 4 hari kerja, website perusahaan sekitar 7 hari kerja, dan toko online sekitar 7–20 hari kerja setelah materi lengkap.',
+    q: 'Berapa lama estimasi pengerjaan website sampai siap pakai?',
+    a: 'Landing Page diselesaikan dalam 4 hari kerja, Website Perusahaan dalam 7 hari kerja, dan Toko Online sekitar 7–20 hari kerja dihitung sejak materi dan rincian kebutuhan diterima lengkap.',
   },
   {
-    q: 'Berapa kali revisi?',
-    a: 'Jumlah revisi disepakati sebelum pengerjaan dimulai. Kami memastikan halaman, konten, dan tampilan sudah sesuai sebelum website dipublikasikan.',
+    q: 'Apakah biaya paket sudah termasuk domain dan cloud hosting?',
+    a: 'Ya, seluruh paket website Astrify sudah mencakup biaya registrasi domain resmi (.my.id atau .com) dan cloud hosting berkecepatan tinggi aktif langsung selama 2 tahun pertama tanpa biaya bulanan tersembunyi.',
   },
   {
-    q: 'Bagaimana sistem pembayarannya?',
-    a: 'Pembayaran dilakukan sesuai invoice dan kesepakatan proyek. Detail termin akan dijelaskan sejak konsultasi awal agar semuanya jelas.',
+    q: 'Berapa kali kesempatan revisi yang didapatkan?',
+    a: 'Kami memberikan garansi evaluasi dan penyesuaian konten sampai tampilan sesuai dengan kesepakatan dan standar kualitas yang Anda inginkan sebelum website resmi dipublikasikan.',
   },
   {
-    q: 'Apakah ada biaya hosting & domain?',
-    a: 'Biaya hosting dan domain ditanggung klien. Kami bantu rekomendasikan provider terbaik dan setup semuanya untukmu.',
+    q: 'Bagaimana alur dan sistem pembayarannya?',
+    a: 'Pembayaran dilakukan secara transparan sesuai invoice resmi atas nama perusahaan. Setelah pembayaran dan kelengkapan materi diterima, pengerjaan langsung dimulai sesuai jadwal.',
   },
   {
-    q: 'Apakah website bisa di-update sendiri?',
-    a: 'Tentu. Kami serahkan website dalam kondisi yang mudah dikelola. Untuk custom, kami juga berikan panduan editing konten.',
+    q: 'Apakah website mudah diperbarui sendiri setelah serah terima?',
+    a: 'Tentu. Kami mendesain website dengan struktur yang mudah dikelola, dan kami menyerahkan video panduan pengoperasian mandiri agar Anda dapat memperbarui foto, teks, atau produk kapan saja.',
   },
 ]
 
-function FaqItem({ faq, isOpen, toggle }) {
+function FaqItem({ faq, isOpen, toggle, index }) {
   return (
-    <div className="border-b border-[var(--border-light)] last:border-0">
-      <button 
-        onClick={toggle} 
-        className="w-full flex items-center justify-between py-5 text-left group"
+    <div className="rounded-2xl border border-[#e5e7eb] bg-white transition-all duration-200 hover:border-[#011ad9]/30">
+      <button
+        type="button"
+        onClick={toggle}
+        aria-expanded={isOpen}
+        aria-controls={`faq-answer-${index}`}
+        id={`faq-question-${index}`}
+        className="flex w-full min-h-[56px] items-center justify-between p-5 text-left text-base font-bold text-[#111827] transition-colors focus:outline-none focus:ring-2 focus:ring-[#011ad9] rounded-2xl group"
       >
-        <span className="text-notion-heading-sm text-[var(--color-ink-black)] group-hover:text-[var(--color-notion-blue)] transition-colors pr-4">
+        <span className="pr-4 group-hover:text-[#011ad9] transition-colors">
           {faq.q}
         </span>
-        <ChevronDown 
-          size={24} 
-          className={`text-[var(--color-stone)] shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} 
-        />
+        <span
+          className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#f1f3f9] text-[#011ad9] transition-transform duration-300 ${
+            isOpen ? 'rotate-180 bg-[#eef2ff]' : ''
+          }`}
+        >
+          <ChevronDown size={18} />
+        </span>
       </button>
-      <AnimatePresence>
+
+      <AnimatePresence initial={false}>
         {isOpen && (
           <motion.div
+            id={`faq-answer-${index}`}
+            role="region"
+            aria-labelledby={`faq-question-${index}`}
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
+            transition={{ duration: 0.28, ease: 'easeInOut' }}
             className="overflow-hidden"
           >
-            <div className="pb-6 text-notion-body text-[var(--color-charcoal)] leading-relaxed max-w-2xl">
+            <div className="border-t border-[#f1f3f9] px-5 pb-5 pt-3.5 text-sm leading-relaxed text-[#4b5563]">
               {faq.a}
             </div>
           </motion.div>
@@ -67,33 +78,37 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(0)
 
   return (
-    <section id="faq" className="section-padding">
-      <div className="container-custom max-w-[800px]">
-        <motion.div 
+    <section id="faq" className="bg-[#f8fafd] py-20 md:py-28">
+      <div className="container-custom max-w-3xl">
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          className="mb-12"
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.5, ease: 'easeOut' }}
+          className="mb-14 text-center"
         >
-          <span className="text-notion-caption text-[var(--color-notion-blue)] uppercase tracking-wider font-bold mb-4 block">
-            FAQ
+          <span className="text-xs font-bold uppercase tracking-wider text-[#011ad9]">
+            Tanya Jawab
           </span>
-          <h2 className="text-notion-heading lg:text-notion-heading-lg text-[var(--color-ink-black)] mb-4">
-            Pertanyaan yang Sering Ditanyakan
+          <h2 className="mt-2 text-3xl font-bold leading-tight tracking-tight text-[#111827] sm:text-4xl md:text-[38px]">
+            Pertanyaan yang Sering Diajukan
           </h2>
+          <p className="mt-4 text-base leading-relaxed text-[#4b5563]">
+            Jawaban jelas dan transparan mengenai layanan, teknis pengerjaan, dan garansi website di Astrify.
+          </p>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
-          className="border-t border-[var(--border-light)]"
+          viewport={{ once: true, margin: '-50px' }}
+          transition={{ duration: 0.5, delay: 0.1, ease: 'easeOut' }}
+          className="space-y-4"
         >
           {faqs.map((faq, i) => (
             <FaqItem
-              key={i}
+              key={faq.q}
+              index={i}
               faq={faq}
               isOpen={openIndex === i}
               toggle={() => setOpenIndex(openIndex === i ? -1 : i)}
