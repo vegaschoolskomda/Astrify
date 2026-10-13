@@ -3,6 +3,7 @@ import FAQ from "../components/FAQ";
 import Hero from "../components/Hero";
 import KatalogTemplate from "../components/KatalogTemplate";
 import MasalahBisnis from "../components/MasalahBisnis";
+import ShowcaseLayanan from "../components/ShowcaseLayanan";
 import PilihanLayanan from "../components/PilihanLayanan";
 import Portofolio from "../components/Portofolio";
 import ProsesKerja from "../components/ProsesKerja";
@@ -13,6 +14,7 @@ export default function LandingPage() {
     <>
       <Hero />
       <MasalahBisnis />
+      <ShowcaseLayanan />
       <PilihanLayanan />
       <KatalogTemplate />
       <Portofolio />

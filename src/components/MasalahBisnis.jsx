@@ -1,104 +1,87 @@
 import { motion } from 'framer-motion'
-import { AlertCircle, Check } from 'lucide-react'
+import { CheckCircle2, ShieldCheck, Target, Zap } from 'lucide-react'
 
-const painPoints = [
-  'Mau ikut tender / kerja sama, tapi cuma bisa kasih link Instagram.',
-  'Calon pelanggan cari di Google — yang muncul justru kompetitor.',
-  'Jualan numpang marketplace: kena potongan admin, data pembeli bukan milikmu.',
-  'Punya web lama tapi lemot, seadanya, dan malu dibagikan.',
-]
-
-const details = [
+const features = [
   {
-    label: 'Total bayar berapa?',
-    content:
-      'Web perusahaan Rp 1.941.010 sekali bayar untuk 2 tahun (.my.id). Sudah termasuk domain + hosting 2 tahun, tidak ada biaya lain sampai 2028.',
+    icon: Target,
+    title: 'Struktur Fokus Konversi',
+    tagline: 'Mengarahkan Pengunjung',
+    description:
+      'Halaman dirancang sistematis membimbing calon klien ke tindakan nyata: formulir pemesanan, katalog produk, atau kontak WhatsApp tanpa distraksi.',
   },
   {
-    label: 'Boleh lihat contoh dulu?',
-    content:
-      'Boleh — kirim kata contoh lewat WhatsApp, kami balas dengan 3 link website klien.',
+    icon: ShieldCheck,
+    title: 'Biaya Transparan 2 Tahun',
+    tagline: 'Tanpa Biaya Tersembunyi',
+    description:
+      'Sudah mencakup domain resmi dan hosting aktif langsung 2 tahun pertama. Tidak ada tagihan bulanan mendadak atau biaya tersembunyi.',
   },
   {
-    label: 'Bayarnya bagaimana?',
-    content:
-      'Lunas sekali di awal setelah invoice resmi atas nama PT terbit, tanpa DP. Bisa transfer ke rekening perusahaan atau bayar pakai kartu kredit. Kalau mau dicicil hingga 12 bulan, cicilannya lewat bank penerbit kartu Anda (bunga & ketentuan dari bank). Kami tetap menerima pembayaran penuh. Pengerjaan dimulai begitu pembayaran dan materi diterima.',
-  },
-  {
-    label: 'Berapa lama jadi?',
-    content:
-      'Landing page 4 hari kerja, web perusahaan 7 hari kerja, toko online 7–20 hari kerja, dihitung sejak materi lengkap.',
+    icon: Zap,
+    title: 'Selesai 4–7 Hari Kerja',
+    tagline: 'Cepat & Siap Pakai',
+    description:
+      'Alur kerja terstruktur dengan standar waktu pengerjaan pasti. Website live dengan optimasi mobile penuh dan seluruh akses diserahkan 100% ke Anda.',
   },
 ]
 
 export default function MasalahBisnis() {
   return (
-    <section className="border-t border-[#e4e8ef] bg-white py-20 md:py-28">
+    <section className="bg-[#f8fafd] py-20 md:py-28">
       <div className="container-custom">
+        {/* Header terpusat per DESIGN.md Section 5.3 */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
+          viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
-          className="mx-auto max-w-3xl text-center py-10"
+          className="mx-auto max-w-2xl text-center"
         >
-          <h2 className="text-3xl font-bold leading-[1.1] tracking-[-0.01em] text-[#191919] md:text-[32px]">
-            Bisnisnya bagus, produknya menarik.
-            <br className="hidden md:block" />
-            Sayang, calon pelanggan masih susah menemukannya secara online.
+          <span className="text-xs font-bold uppercase tracking-wider text-[#011ad9]">
+            Keunggulan Layanan
+          </span>
+          <h2 className="mt-2 text-3xl font-bold leading-tight tracking-tight text-[#111827] sm:text-4xl md:text-[38px]">
+            Dirancang untuk Keberhasilan Bisnis Anda
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-base leading-6 text-[#77716d] md:text-[17px]">
-            Empat hal ini yang paling sering kami dengar sebelum bisnis akhirnya memakai jasa
-            pembuatan website:
+          <p className="mt-4 text-base leading-relaxed text-[#4b5563]">
+            Setiap elemen dan arsitektur website dibangun dengan pertimbangan cermat untuk mendukung
+            pertumbuhan usaha dan memperkuat kepercayaan calon pembeli.
           </p>
         </motion.div>
 
-        <div className="mx-auto mt-8 grid max-w-[1010px] gap-3 md:grid-cols-2 lg:grid-cols-4 px-2 py-6">
-          {painPoints.map((point, index) => (
-            <motion.div
-              key={point}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.45, delay: index * 0.08, ease: 'easeOut' }}
-              className="flex min-h-[132px] gap-3 rounded-xl border border-[#e4e8ef] bg-[#fbfcfe] p-5 transition-colors hover:bg-white"
-            >
-              <AlertCircle
-                size={26}
-                strokeWidth={2}
-                className="mt-0.5 shrink-0 text-[#f47c4a]"
-                aria-hidden="true"
-              />
-              <p className="text-[17px] leading-[1.2] text-[#000000]">{point}</p>
-            </motion.div>
-          ))}
-        </div>
+        {/* 3-Kolom Kartu Fitur dengan sudut rounded-3xl dan ikon bulat 56px */}
+        <div className="mt-14 grid gap-8 md:grid-cols-3">
+          {features.map((feature, index) => {
+            const Icon = feature.icon
+            return (
+              <motion.article
+                key={feature.title}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.5, delay: index * 0.1, ease: 'easeOut' }}
+                className="group relative flex flex-col items-center rounded-3xl border border-[#e5e7eb] bg-white p-8 text-center shadow-[0_10px_30px_-5px_rgba(0,0,0,0.05),0_20px_40px_-15px_rgba(1,26,217,0.04)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_16px_36px_-4px_rgba(0,0,0,0.08),0_8px_16px_-4px_rgba(1,26,217,0.06)]"
+              >
+                {/* Kontainer ikon lingkaran 56px per DESIGN.md Section 5.3 */}
+                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-[#f1f3f9] text-[#011ad9] transition-colors duration-300 group-hover:bg-[#eef2ff]">
+                  <Icon size={26} strokeWidth={2.2} />
+                </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-50px' }}
-          transition={{ duration: 0.5, delay: 0.15, ease: 'easeOut' }}
-          className="mx-auto mt-16 max-w-[770px] space-y-2 md:mt-20 py-2"
-        >
-          {details.map((detail) => (
-            <div
-              key={detail.label}
-              className="flex gap-3 rounded-xl border border-[#e4e8ef] px-4 py-3 text-[17px] leading-[1.7] text-[#000000] md:px-4"
-            >
-              <Check
-                size={18}
-                strokeWidth={3}
-                className="mt-0.5 shrink-0 text-[#219653]"
-                aria-hidden="true"
-              />
-              <p>
-                <strong className="font-bold text-[#403c39]">{detail.label}</strong>{' '}
-                {detail.content}
-              </p>
-            </div>
-          ))}
-        </motion.div>
+                <span className="mb-1 text-xs font-semibold uppercase tracking-wider text-[#011ad9]">
+                  {feature.tagline}
+                </span>
+
+                <h3 className="mb-3 text-xl font-bold tracking-tight text-[#111827]">
+                  {feature.title}
+                </h3>
+
+                <p className="text-sm leading-relaxed text-[#4b5563]">
+                  {feature.description}
+                </p>
+              </motion.article>
+            )
+          })}
+        </div>
       </div>
     </section>
   )
