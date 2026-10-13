@@ -1,90 +1,73 @@
 @import "tailwindcss";
 
 @theme {
-  /* Colors */
-  --color-notion-blue: #0075de;
-  --color-paper-warmth: #f6f5f4;
-  --color-pure-white: #ffffff;
-  --color-ink-black: #000000;
-  --color-charcoal: #111111;
-  --color-stone: #757575;
-  --color-graphite: #615d59;
-  --color-slate: #696969;
-  --color-sky-tint: #e6f3fe;
-  --color-marigold: #ffb110;
-  --color-coral: #f64932;
-  --color-saffron: #e89d01;
-  --color-vermillion: #e32d14;
-  --color-mocha: #b18164;
-  --color-signal-blue: #097fe8;
-  --color-sky-wash: #62aef0;
-  --color-midnight-ink: #02093a;
+  /* Brand primary colors derived from DESIGN.md (#011ad9 Electric Royal Blue) */
+  --color-primary: #011ad9;
+  --color-primary-hover: #0115b0;
+  --color-primary-active: #001087;
+  --color-primary-50: #eef2ff;
+  --color-primary-100: #e0e7ff;
+  --color-primary-200: #c7d2fe;
+  --color-primary-300: #a5b4fc;
+  --color-primary-400: #818cf8;
+  --color-primary-500: #4f46e5;
+  --color-primary-600: #011ad9;
+  --color-primary-700: #0115b0;
+  --color-primary-800: #001087;
+  --color-primary-900: #000b5e;
+  --color-primary-950: #000638;
+
+  /* Metric and functional accent tokens */
+  --color-metric-green: #10b981;
+  --color-metric-green-dark: #059669;
+  --color-metric-green-bg: #ecfdf5;
+  --color-accent-amber: #f59e0b;
+  --color-accent-amber-light: #fbbf24;
+
+  /* Surfaces and neutral palette */
+  --color-surface-canvas: #ffffff;
+  --color-surface-subtle: #f8fafd;
+  --color-surface-card: #ffffff;
+  --color-surface-input: #f1f3f9;
+  --color-text-main: #111827;
+  --color-text-secondary: #4b5563;
+  --color-text-muted: #9ca3af;
+  --color-border-subtle: #e5e7eb;
 
   /* Typography */
-  --font-notioninter: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-lyon-text: 'Source Serif 4', ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-sans: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
 
-  /* Typography — Scale */
-  --text-caption: 12px;
-  --leading-caption: 1.33;
-  --tracking-caption: 0.12px;
-  --text-body-sm: 14px;
-  --leading-body-sm: 1.43;
-  --text-body: 16px;
-  --leading-body: 1.5;
-  --text-subheading: 20px;
-  --leading-subheading: 1;
-  --text-heading-sm: 22px;
-  --leading-heading-sm: 1.27;
-  --tracking-heading-sm: -0.242px;
-  --text-heading: 40px;
-  --leading-heading: 1.5;
-  --text-heading-lg: 48px;
-  --leading-heading-lg: 1.5;
-  --text-display-sm: 54px;
-  --leading-display-sm: 1.04;
-  --tracking-display-sm: -1.89px;
-  --text-display: 72px;
-  --leading-display: 1.21;
-  --tracking-display: -2.016px;
-  --text-display-lg: 96px;
-  --leading-display-lg: 1.04;
-  --tracking-display-lg: -4.608px;
+  /* Elevation and shadows */
+  --shadow-soft-card: 0 10px 30px -5px rgba(0, 0, 0, 0.05), 0 20px 40px -15px rgba(1, 26, 217, 0.04);
+  --shadow-floating-badge: 0 15px 35px -5px rgba(0, 0, 0, 0.08), 0 5px 15px rgba(0, 0, 0, 0.03);
+  --shadow-primary-glow: 0 8px 20px -4px rgba(1, 26, 217, 0.35);
+  --shadow-card-hover: 0 16px 36px -4px rgba(0, 0, 0, 0.08), 0 8px 16px -4px rgba(1, 26, 217, 0.06);
 
-  /* Spacing */
-  --spacing-4: 4px;
-  --spacing-8: 8px;
-  --spacing-12: 12px;
-  --spacing-16: 16px;
-  --spacing-20: 20px;
-  --spacing-24: 24px;
-  --spacing-28: 28px;
-  --spacing-32: 32px;
-  --spacing-36: 36px;
-  --spacing-64: 64px;
-  --spacing-80: 80px;
-
-  /* Border Radius */
-  --radius-md: 4px;
-  --radius-lg: 8px;
-  --radius-xl: 12px;
-  --radius-full: 9999px;
+  /* Compatibility aliases for seamless multi-phase migration */
+  --color-notion-blue: #011ad9;
+  --color-ink-black: #111827;
+  --color-charcoal: #1f2937;
+  --color-graphite: #4b5563;
+  --color-slate: #6b7280;
+  --color-stone: #9ca3af;
+  --color-pure-white: #ffffff;
+  --font-notioninter: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-lyon-text: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
 }
 
 :root {
-  /* Surfaces */
-  --surface-page-canvas: #f8f9fb;
+  --surface-page-canvas: #ffffff;
   --surface-card-surface: #ffffff;
-  --surface-accent-card-surface: #ffb110;
-  --surface-dark-card-surface: #02093a;
-  --border-light: #e4e8ef;
+  --surface-accent-card-surface: #011ad9;
+  --surface-dark-card-surface: #000b5e;
+  --border-light: #e5e7eb;
 }
 
 html {
   scroll-behavior: smooth;
-  font-family: var(--font-notioninter);
+  font-family: var(--font-sans);
   background-color: var(--surface-page-canvas);
-  color: var(--color-ink-black);
+  color: var(--color-text-main);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -92,7 +75,8 @@ html {
 body {
   margin: 0;
   background: var(--surface-page-canvas);
-  color: var(--color-charcoal);
+  color: var(--color-text-main);
+  font-family: var(--font-sans);
 }
 
 @layer components {
@@ -106,169 +90,185 @@ body {
   }
 
   .section-padding {
-    padding-top: clamp(64px, 8vw, 112px);
-    padding-bottom: clamp(64px, 8vw, 112px);
+    padding-top: clamp(64px, 8vw, 104px);
+    padding-bottom: clamp(64px, 8vw, 104px);
   }
 
-  /* Cards */
+  /* Cards matching DESIGN.md rounded-3xl and diffused shadow */
   .card-white {
-    background-color: var(--surface-card-surface);
-    border-radius: 18px;
-    padding: var(--spacing-24);
-    border: 1px solid var(--border-light);
-    box-shadow: 0 8px 24px rgba(24, 42, 72, 0.05);
+    background-color: var(--color-surface-card);
+    border-radius: 24px;
+    padding: 24px;
+    border: 1px solid var(--color-border-subtle);
+    box-shadow: var(--shadow-soft-card);
   }
 
   .card-accent {
-    border-radius: 24px;
-    padding: var(--spacing-24);
-    border: none;
-    box-shadow: 0 12px 28px rgba(24, 42, 72, 0.08);
+    border-radius: 28px;
+    padding: 28px;
+    border: 1px solid var(--color-border-subtle);
+    box-shadow: var(--shadow-soft-card);
   }
 
   .card-dark {
-    background: linear-gradient(180deg, #eaf5ff 0%, #dff0ff 100%);
-    color: var(--color-ink-black);
-    border-radius: 18px;
-    padding: var(--spacing-24);
-    border: 1px solid rgba(0, 117, 222, 0.12);
-    box-shadow: 0 8px 24px rgba(24, 42, 72, 0.05);
+    background-color: #011ad9;
+    color: #ffffff;
+    border-radius: 24px;
+    padding: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: var(--shadow-soft-card);
   }
 
-  /* Typography */
-  .text-notion-display-lg {
-    font-size: var(--text-display-lg);
-    line-height: var(--leading-display-lg);
-    letter-spacing: var(--tracking-display-lg);
-    font-weight: 500;
-  }
-  
-  .text-notion-display {
-    font-size: var(--text-display);
-    line-height: var(--leading-display);
-    letter-spacing: var(--tracking-display);
-    font-weight: 500;
-  }
-  
-  .text-notion-display-sm {
-    font-size: var(--text-display-sm);
-    line-height: var(--leading-display-sm);
-    letter-spacing: var(--tracking-display-sm);
-    font-weight: 500;
-  }
-  
-  .text-notion-heading-lg {
-    font-size: var(--text-heading-lg);
-    line-height: var(--leading-heading-lg);
-    font-weight: 650;
-    letter-spacing: -1.5px;
-  }
-  
-  .text-notion-heading {
-    font-size: var(--text-heading);
-    line-height: var(--leading-heading);
-    font-weight: 600;
-  }
-
-  .text-notion-heading-sm {
-    font-size: var(--text-heading-sm);
-    line-height: var(--leading-heading-sm);
-    letter-spacing: var(--tracking-heading-sm);
-    font-weight: 600;
-  }
-
-  .text-notion-subheading {
-    font-size: var(--text-subheading);
-    line-height: var(--leading-subheading);
-    font-weight: 500;
-  }
-
-  .text-notion-body {
-    font-size: var(--text-body);
-    line-height: var(--leading-body);
-    font-weight: 400;
-  }
-
-  .text-notion-body-sm {
-    font-size: var(--text-body-sm);
-    line-height: var(--leading-body-sm);
-    font-weight: 400;
-  }
-
-  .text-notion-caption {
-    font-size: var(--text-caption);
-    line-height: var(--leading-caption);
-    letter-spacing: var(--tracking-caption);
-    font-weight: 500;
-  }
-  
-  .font-editorial {
-    font-family: var(--font-lyon-text);
-  }
-
-  /* Buttons */
+  /* Interactive Pill-shaped buttons per DESIGN.md Section 4.1 */
   .btn-primary {
-    background-color: var(--color-notion-blue);
-    color: var(--color-pure-white);
-    font-size: var(--text-body-sm);
-    font-weight: 650;
-    border-radius: 10px;
-    padding: 11px 18px;
-    transition: all 0.2s ease;
+    background-color: var(--color-primary);
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 9999px;
+    padding: 12px 24px;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     display: inline-flex;
     align-items: center;
-    gap: var(--spacing-8);
+    justify-content: center;
+    gap: 8px;
+    box-shadow: var(--shadow-primary-glow);
   }
 
   .btn-primary:hover {
-    background-color: #0060b8; /* darker shade */
+    background-color: var(--color-primary-hover);
+    transform: translateY(-1px);
   }
 
   .btn-ghost {
     background-color: transparent;
-    color: var(--color-notion-blue);
-    font-size: var(--text-body-sm);
-    font-weight: 500;
-    border: 1px solid currentColor;
-    border-radius: 10px;
-    padding: 10px 18px;
-    transition: all 0.2s ease;
+    color: var(--color-primary);
+    font-size: 15px;
+    font-weight: 600;
+    border: 1.5px solid var(--color-primary);
+    border-radius: 9999px;
+    padding: 11px 22px;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     display: inline-flex;
     align-items: center;
-    gap: var(--spacing-8);
+    justify-content: center;
+    gap: 8px;
   }
 
   .btn-ghost:hover {
-    background-color: #d1e8fd;
+    background-color: var(--color-primary-50);
   }
 
   .btn-text-ghost {
     background-color: transparent;
-    color: rgba(0, 0, 0, 0.95);
-    font-size: var(--text-body-sm);
-    font-weight: 500;
-    border-radius: var(--radius-lg);
-    padding: 8px 16px;
+    color: var(--color-text-main);
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 9999px;
+    padding: 8px 18px;
     transition: all 0.2s ease;
     display: inline-flex;
     align-items: center;
-    gap: var(--spacing-8);
+    justify-content: center;
+    gap: 8px;
   }
 
   .btn-text-ghost:hover {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: var(--color-surface-input);
+    color: var(--color-primary);
   }
 
-  /* Decorative Marks */
-  .character-mark {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    border: 2px solid;
-    background-color: var(--color-pure-white);
-    display: flex;
-    align-items: center;
-    justify-center: center;
-    overflow: hidden;
+  /* Pill-shaped form input standard */
+  .input-pill {
+    width: 100%;
+    border-radius: 9999px;
+    background-color: var(--color-surface-input);
+    color: var(--color-text-main);
+    padding: 14px 22px;
+    border: 1px solid transparent;
+    font-size: 14px;
+    transition: all 0.2s ease;
+  }
+
+  .input-pill::placeholder {
+    color: var(--color-text-muted);
+  }
+
+  .input-pill:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(1, 26, 217, 0.12);
+  }
+
+  /* Typography scale helper classes */
+  .text-notion-display-lg {
+    font-size: clamp(48px, 6vw, 68px);
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    font-weight: 700;
+  }
+
+  .text-notion-display {
+    font-size: clamp(38px, 4.5vw, 56px);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
+
+  .text-notion-display-sm {
+    font-size: clamp(32px, 3.5vw, 44px);
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+    font-weight: 700;
+  }
+
+  .text-notion-heading-lg {
+    font-size: clamp(28px, 3vw, 38px);
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+    font-weight: 700;
+  }
+
+  .text-notion-heading {
+    font-size: clamp(24px, 2.5vw, 32px);
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    font-weight: 700;
+  }
+
+  .text-notion-heading-sm {
+    font-size: 20px;
+    line-height: 1.35;
+    font-weight: 600;
+  }
+
+  .text-notion-subheading {
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 500;
+  }
+
+  .text-notion-body {
+    font-size: 16px;
+    line-height: 1.65;
+    font-weight: 400;
+  }
+
+  .text-notion-body-sm {
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+
+  .text-notion-caption {
+    font-size: 12px;
+    line-height: 1.4;
+    letter-spacing: 0.04em;
+    font-weight: 600;
+  }
+
+  .font-editorial {
+    font-family: var(--font-sans);
   }
 }
