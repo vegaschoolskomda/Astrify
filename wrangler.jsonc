@@ -1,9 +1,8 @@
 
 {
-  "name": "astrify",
+  "name": "static-nama-siswa",
   "compatibility_date": "2026-10-14",
   "assets": {
-    "directory": "./dist",
-    "not_found_handling": "single-page-application"
+    "directory": "./public"
   }
 }
